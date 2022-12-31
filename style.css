@@ -5,6 +5,8 @@
     --text-secondary: #ececec;
     --bg-primary: #23232e;
     --bg-secondary: #141418;
+
+    --navbar-thickness: 5rem;
 }
 
 body {
@@ -15,5 +17,13 @@ body {
 }
 
 main {
-    margin-left: 5rem;
+    margin-left: var(--navbar-thickness);
+    padding: 0 1rem;
+}
+
+.navbar {
+    width: var(--navbar-thickness);
+    height: 100vh;
+    position: fixed;
+    background-color: var(--bg-primary);
 }
