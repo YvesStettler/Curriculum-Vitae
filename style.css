@@ -1,8 +1,9 @@
 :root {
     font-size: 16px;
     font-family: 'Open Sans';
+
     --text-primary: #b6b6b6;
-    --text-secondary: #ececec;
+    --text-secondary: #676787;
     --bg-primary: #23232e;
     --bg-secondary: #141418;
 
@@ -76,6 +77,8 @@ main {
     margin: 0 1.5rem;
 
     color: var(--text-primary);
+    filter: grayscale(100%) opacity(.7);
+    transition: filter var(--transition-speed);
 
     transition: width var(--transition-speed) ease-in-out;
 }
@@ -83,6 +86,9 @@ main {
 .nav-link:hover svg {
     width: 3rem;
     height: 3rem;
+
+    filter: grayscale(0) opacity(1);
+    color: var(--text-secondary);
 }
 
 .link-text {
