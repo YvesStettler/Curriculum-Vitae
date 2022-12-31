@@ -98,3 +98,8 @@ main {
 .navbar:hover .link-text {
     display: block;
 }
+
+/* Section handling */
+.page {
+    height: 100vh;
+}
