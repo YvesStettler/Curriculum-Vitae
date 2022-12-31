@@ -18,7 +18,9 @@ body {
 
 main {
     margin-left: var(--navbar-thickness);
-    padding: 0 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1px;
 }
 
 .navbar {
@@ -26,4 +28,8 @@ main {
     height: 100vh;
     position: fixed;
     background-color: var(--bg-primary);
+}
+
+.nav-item {
+    text-decoration: none;
 }
