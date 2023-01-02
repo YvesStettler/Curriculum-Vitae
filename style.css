@@ -166,6 +166,7 @@ section {
 
 .page-divider svg {
     height: 143px;
+    width: 100%;
 }
 
 .page-divider .shape-fill {
@@ -177,11 +178,16 @@ section {
     background-color: var(--sect2-bg-primary);
 }
 
+#knowledge {
+    height: 100%;
+}
+
 #knowledge article {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     align-items: center;
+    margin: 0 auto;
 }
 
 #knowledge div {
@@ -197,4 +203,20 @@ section {
     list-style: none;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5rem;
+    width: 100%;
+    justify-content: space-around;
+}
+
+#knowledge li {
+    cursor: pointer;
+}
+
+#knowledge li img {
+    height: 11vw;
+    max-width: 11vw;
+
+    margin: 0;
+    padding: 0;
 }
