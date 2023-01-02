@@ -9,6 +9,8 @@
 
     --sect1-text-primary: #141418;
     --sect1-bg-primary: #676787;
+    --sect2-text-primary: #23232e;
+    --sect2-bg-primary: b6b6b6;
 
     --navbar-thickness: 5rem;
     --transition-speed: 200ms;
@@ -24,7 +26,7 @@ body {
     background-color: white;
 }
 
-header, main {
+.main-header, main {
     margin-left: var(--navbar-thickness);
     margin-top: 0;
 }
@@ -122,7 +124,7 @@ header, main {
     background-color: #001220;
     color: #b6b6b6;
     overflow: hidden;
-    margin: 0;
+    margin: 0  0 0 var(--navbar-thickness);
     padding: 0;
 }
 
@@ -141,6 +143,7 @@ section {
 
 .page {
     height: 100vh;
+    overflow: hidden;
 }
 
 .page h2,
@@ -166,9 +169,32 @@ section {
 }
 
 .page-divider .shape-fill {
-    fill: #676787;
+    fill: var(--sect1-bg-primary);
 }
 
 #formation {
-    background-color: red;
+    color: var(--sect2-text-primary);
+    background-color: var(--sect2-bg-primary);
+}
+
+#knowledge article {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+#knowledge div {
+    margin: .5rem;
+}
+
+#knowledge h3 {
+    width: 100%;
+    text-align: center;
+}
+
+#knowledge article ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
 }
