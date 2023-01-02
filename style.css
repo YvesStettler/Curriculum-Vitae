@@ -21,6 +21,10 @@
     padding: 0;
 }
 
+h1 {
+    display: none;
+}
+
 body {
     color: black;
     background-color: white;
@@ -135,25 +139,17 @@ main,
     background-position: bottom;
 }
 
-/*
-.header-divider {
-    position: relative;
-    display: block;
-    width: 100vw;
-    height: 100%;
-    bottom: 0;
-    right: 0;
-}
-
-.header-divider svg {
-    width: 100vw;
-}
-
-.header-divider svg path {
+.header-content {
     width: 100%;
+    height: 100%;
 }
 
-*/
+.animated-text {
+    color: #b6b6b6;
+    font-size: 5rem;
+    text-align: center;
+    margin-top: calc(30vh - 2.5rem);
+}
 
 /* Section handling */
 
