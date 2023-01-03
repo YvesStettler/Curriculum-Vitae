@@ -19,7 +19,10 @@
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a href="#home" class="nav-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                        <path fill="currentColor"
+                            d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+                    </svg>
                     <span class="link-text">Accueil</span>
                 </a>
             </li>
@@ -69,7 +72,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="./about.html" class="nav-link">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <path fill="currentColor"
                             d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-144c-17.7 0-32-14.3-32-32s14.3-32 32-32s32 14.3 32 32s-14.3 32-32 32z" />
@@ -89,10 +92,12 @@
     </header>
     <main>
         <section class="page" id="introduction">
-            <h2 class="page-title">Introduction</h2>
-            <article>
-                <p>Something something darkside...</p>
-            </article>
+            <div class="section-content appearing-content">
+                <h2 class="page-title">Introduction</h2>
+                <article>
+                    <p>Something something darkside...</p>
+                </article>
+            </div>
         </section>
         <section class="page" id="formation">
             <div class="svg-divider page-divider">
@@ -108,63 +113,71 @@
                         d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
                         class="shape-fill"></path>
                 </svg>
-
             </div>
-            <h2 class="page-title">Formations</h2>
+            <div class="section-content appearing-content">
+                <h2 class="page-title">Formations</h2>
+            </div>
         </section>
         <section class="page" id="knowledge">
-            <h2 class="page-title">Connaissances</h2>
-            <article>
-                <div class="dev-lang">
-                    <h3>Programmation</h3>
-                    <ul>
-                        <li class="dev-lang-item"><img src="./Icons/c-logo.png" alt="C"></li>
-                        <li class="dev-lang-item"><img src="./Icons/cpp-logo.png" alt="C++"></li>
-                        <li class="dev-lang-item"><img src="./Icons/Logo_C_sharp.svg" alt="C#"></li>
-                        <li class="dev-lang-item"><img src="./Icons/Java_Logo.svg" alt="Java"></li>
-                        <li class="dev-lang-item"><img src="./Icons/Rust_logo.svg" alt="Rust"></li>
-                        <li class="dev-lang-item"><img src="./Icons/HTML5_logo.svg" alt="HTML5"></li>
-                        <li class="dev-lang-item"><img src="./Icons/CSS3_logo.svg" alt=""></li>
-                        <li class="dev-lang-item"><img src="./Icons/Javascript-logo.svg" alt="JavaScript"></li>
-                    </ul>
-                </div>
-                <div class="os">
-                    <h3>Systèmes d'exploitation</h3>
-                    <ul class="os-ms">
-                        <li class="os-ms-item"><img src="./Icons/Windows_logo.svg" alt="Windows 10/11"></li>
-                        <li class="os-ms-item"><img src="./Icons/windows-server-logo.svg" alt="Windows Serveur 2012/2016/2019"></li>
-                    </ul>
-                    <ul class="os-unix">
-                        <li class="os-unix-item"><img src="./Icons/debian-logo.svg" alt="Debian/Ubuntu"></li>
-                        <li class="os-unix-item"><img src="./Icons/Archlinux-logo.svg" alt="Arch Linux/Artix Linux"></li>
-                        <li class="os-unix-item"><img src="./Icons/CentOS_logo.svg" alt="CentOS"></li>
-                        <li class="os-unix-item"><img src="./Icons/Gentoo_Logo.svg" alt="Gentoo"></li>
-                    </ul>
-                </div>
-                <div class="system">
-                    <h3>Systèmes</h3>
-                    <ul class="scripting">
-                        <li class="scipting-item"><img src="./Icons/PowerShell_logo.png" alt="PowerShell"></li>
-                        <li class="scipting-item"><img src="./Icons/Bash_Logo.svg" alt="Bash/Zsh"></li>
-                        <li class="scipting-item"><img src="./Icons/batch-logo.svg" alt="Batch"></li>
-                    </ul>
-                </div>
-            </article>
+            <div class="section-content appearing-content">
+                <h2 class="page-title">Connaissances</h2>
+                <article>
+                    <div class="dev-lang appearing-content">
+                        <h3>Programmation</h3>
+                        <ul>
+                            <li class="dev-lang-item"><img src="./Icons/c-logo.png" alt="C"></li>
+                            <li class="dev-lang-item"><img src="./Icons/cpp-logo.png" alt="C++"></li>
+                            <li class="dev-lang-item"><img src="./Icons/Logo_C_sharp.svg" alt="C#"></li>
+                            <li class="dev-lang-item"><img src="./Icons/Java_Logo.svg" alt="Java"></li>
+                            <li class="dev-lang-item"><img src="./Icons/Rust_logo.svg" alt="Rust"></li>
+                            <li class="dev-lang-item"><img src="./Icons/HTML5_logo.svg" alt="HTML5"></li>
+                            <li class="dev-lang-item"><img src="./Icons/CSS3_logo.svg" alt=""></li>
+                            <li class="dev-lang-item"><img src="./Icons/Javascript-logo.svg" alt="JavaScript"></li>
+                        </ul>
+                    </div>
+                    <div class="os appearing-content">
+                        <h3>Systèmes d'exploitation</h3>
+                        <ul class="os-ms">
+                            <li class="os-ms-item"><img src="./Icons/Windows_logo.svg" alt="Windows 10/11"></li>
+                            <li class="os-ms-item"><img src="./Icons/windows-server-logo.svg"
+                                    alt="Windows Serveur 2012/2016/2019"></li>
+                        </ul>
+                        <ul class="os-unix appearing-content">
+                            <li class="os-unix-item"><img src="./Icons/debian-logo.svg" alt="Debian/Ubuntu"></li>
+                            <li class="os-unix-item"><img src="./Icons/Archlinux-logo.svg" alt="Arch Linux/Artix Linux">
+                            </li>
+                            <li class="os-unix-item"><img src="./Icons/CentOS_logo.svg" alt="CentOS"></li>
+                            <li class="os-unix-item"><img src="./Icons/Gentoo_Logo.svg" alt="Gentoo"></li>
+                        </ul>
+                    </div>
+                    <div class="system appearing-content">
+                        <h3>Systèmes</h3>
+                        <ul class="scripting">
+                            <li class="scipting-item"><img src="./Icons/PowerShell_logo.png" alt="PowerShell"></li>
+                            <li class="scipting-item"><img src="./Icons/Bash_Logo.svg" alt="Bash/Zsh"></li>
+                            <li class="scipting-item"><img src="./Icons/batch-logo.svg" alt="Batch"></li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
         </section>
         <section class="page" id="hobbies">
-            <h2 class="page-title">Hobbies</h2>
-            <article>
-                <ul>
-                    <li>Musique</li>
-                    <li>Cuisine</li>
-                    <li>Litérature</li>
-                </ul>
-            </article>
+            <div class="section-content appearing-content">
+                <h2 class="page-title">Hobbies</h2>
+                <article>
+                    <ul>
+                        <li>Musique</li>
+                        <li>Cuisine</li>
+                        <li>Litérature</li>
+                    </ul>
+                </article>
+            </div>
         </section>
     </main>
     <footer class="main-footer">
         <ul>
-            <li><a href="https://github.com/YvesStettler" target="_blank"><img class="footer-icon" src="./Icons/Octicons-mark-github.svg" alt="GitHub"></a></li>
+            <li><a href="https://github.com/YvesStettler" target="_blank"><img class="footer-icon"
+                        src="./Icons/Octicons-mark-github.svg" alt="GitHub"></a></li>
             <li><a href="mailto:yves.stettler@proton.me">E-mail</a></li>
             <li></li>
         </ul>

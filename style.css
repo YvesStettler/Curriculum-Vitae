@@ -1,6 +1,7 @@
 :root {
     font-size: 16px;
     font-family: 'Open Sans';
+    scroll-behavior: smooth;
 
     --text-primary: #b6b6b6;
     --text-secondary: #676787;
@@ -10,7 +11,8 @@
     --sect1-text-primary: #141418;
     --sect1-bg-primary: #676787;
     --sect2-text-primary: #23232e;
-    --sect2-bg-primary: b6b6b6;
+    --sect2-bg-primary: #B76999;
+    --sect3-bg-primary: #8B6A98;
 
     --navbar-thickness: 5rem;
     --transition-speed: 200ms;
@@ -141,14 +143,16 @@ main,
 
 .header-content {
     width: 100%;
-    height: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .animated-text {
     color: #b6b6b6;
     font-size: 5rem;
     text-align: center;
-    margin-top: calc(30vh - 2.5rem);
 }
 
 .animated-text p {
@@ -180,6 +184,27 @@ section {
     padding-bottom: .5rem;
 }
 
+.appearing-content {
+    opacity: 0;
+}
+
+.appearing-content-animation {
+    animation: fadein-translate calc(var(--transition-speed)*4) ease-in-out;
+}
+
+@keyframes fadein-translate {
+    0% {
+        opacity: 0;
+        transform: translate(0, 30%);
+        pointer-events: none;
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+        pointer-events: all;
+    }
+}
+
 #introduction {
     color: var(--sect1-text-primary);
     background-color: var(--sect1-bg-primary);
@@ -197,10 +222,15 @@ section {
 #formation {
     color: var(--sect2-text-primary);
     background-color: var(--sect2-bg-primary);
+    background-image: url(./svgs/2-3-divider.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
 }
 
 #knowledge {
     height: 100%;
+    background-color: var(--sect3-bg-primary);
 }
 
 #knowledge article {

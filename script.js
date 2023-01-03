@@ -26,7 +26,7 @@ async function textCursorAnimation() {
 async function animationLoop() {
     const textNode = document.getElementById('animated-header-text');
     const speed = 30000;
-    const rngFactor = 30000;
+    const rngFactor = 10000;
 
     while (true) {
         writingAnimation();
@@ -36,5 +36,15 @@ async function animationLoop() {
     }
 }
 
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) {
+            entry.target.classList.add('appearing-content-animation');
+            entry.target.classList.remove('appearing-content');
+        }
+    });
+});
+
 textCursorAnimation();
 animationLoop();
+document.querySelectorAll('.appearing-content').forEach(element => observer.observe(element));
