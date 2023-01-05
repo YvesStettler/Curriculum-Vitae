@@ -2,13 +2,20 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function writingAnimation() {
-    const textNode = document.getElementById('animated-header-text');
-    const txt = "Yves Stettler";
+async function writingAnimation(nameTextNode, funcTextNode, txtCursor) {
+    const name = "Yves Stettler";
+    const func = "Technicien en informatique";
     const speed = 100;
 
-    for (let i = 0; i < txt.length; i++) {
-        textNode.innerHTML += txt.charAt(i);
+    for (let i = 0; i < name.length; i++) {
+        nameTextNode.innerHTML += name.charAt(i);
+        await sleep(speed + Math.floor(Math.random() * 40));
+    }
+
+    txtCursor.classList.add('cursor-text-smaller');
+
+    for (let i = 0; i < func.length; i++) {
+        funcTextNode.innerHTML += func.charAt(i);
         await sleep(speed + Math.floor(Math.random() * 40));
     }
 }
@@ -24,15 +31,19 @@ async function textCursorAnimation() {
 }
 
 async function animationLoop() {
-    const textNode = document.getElementById('animated-header-text');
+    const nameTextNode = document.getElementById('animated-name');
+    const funcTextNode = document.getElementById('animated-function');
+    const cursor = document.getElementById('text-cursor');
     const speed = 30000;
     const rngFactor = 10000;
 
     while (true) {
-        writingAnimation();
+        writingAnimation(nameTextNode, funcTextNode, cursor);
     
         await sleep(speed + Math.floor(Math.random() * rngFactor));
-        textNode.innerHTML = "";
+        nameTextNode.innerHTML = "";
+        funcTextNode.innerHTML = "";
+        cursor.classList.remove('cursor-text-smaller');
     }
 }
 

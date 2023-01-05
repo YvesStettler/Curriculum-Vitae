@@ -1,5 +1,4 @@
 :root {
-    font-size: 16px;
     font-family: 'Open Sans';
     scroll-behavior: smooth;
 
@@ -16,14 +15,21 @@
     --sect1-text-primary: var(--header-text);
     --sect1-bg-primary: var(--header-bg);
     --sect2-text-primary: #23232e;
-    --sect2-bg-primary: #B76999;
+    --sect2-bg-primary: #676787;
     --sect3-bg-primary: #8B6A98;
+    --sect4-bg-primary: #C62368;
 
     --footer-bg: var(--header-bg);
     --footer-text: var(--header-text);
 
     --navbar-thickness: 5rem;
     --transition-speed: 200ms;
+}
+
+@media screen and (max-width: 1079px) {
+    :root {
+        font-size: .8rem;
+    }
 }
 
 * {
@@ -159,12 +165,65 @@ main,
 
 .animated-text {
     color: var(--header-text);
-    font-size: 5rem;
-    text-align: center;
+    font-size: 4rem;
+    letter-spacing: .8rem;
+
+    text-align: left;
+    width: 60%;
+    font-family: 'JetBrains Mono', monospace;
 }
 
-.animated-text p {
+.cursor-text-smaller {
+    font-size: 2.5rem;
+}
+
+#animated-function {
+    font-size:2.5rem;
+}
+
+.animated-text p,
+.small-device-header-text p {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+#animated-header-text {
     display: inline;
+}
+
+#text-cursor {
+    display: inline-block;
+    transform: translateX(-3rem);
+}
+
+.small-device-header-text {
+    display: none;
+}
+
+@media screen and (max-width: 1079px) {
+    .animated-text {
+        width: 70%;
+    }
+    
+    .small-device-header-text {
+        display: inline;
+        font-size: 3rem;
+        letter-spacing: .2rem;
+    }
+
+    .small-device-header-text p:last-child {
+        font-size: 1.5rem;
+    }
+
+    #text-cursor {
+        font-size: 1.5rem;
+        transform: translateX(-2rem);
+    }   
+
+    #animated-header-text {
+        display: none;
+    }
 }
 
 /* Section handling */
@@ -175,7 +234,7 @@ section {
 }
 
 .page {
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -222,6 +281,37 @@ section {
     background-color: var(--sect1-bg-primary);
 }
 
+#introduction-container {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+    grid-template-areas: 
+        "header header"
+        "col1 col2";
+
+    gap: 5rem;
+    margin-bottom: 5rem;
+    font-size: 1.4rem;
+}
+
+#introduction-container h2 {
+    grid-area: header;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 3rem;
+
+}
+
+#introduction-container .grid-item:nth-child(2) {
+    grid-area: col1;
+}
+
+#introduction-container article p {
+    margin-bottom: .5rem;
+}
+
 .page-divider svg {
     height: 143px;
     width: 100%;
@@ -234,7 +324,6 @@ section {
 #formation {
     color: var(--sect2-text-primary);
     background-color: var(--sect2-bg-primary);
-    background-image: url(./svgs/2-3-divider.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
@@ -289,6 +378,11 @@ section {
     padding: 0;
 }
 
+#hobbies {
+    height: 100%;
+    background-color: var(--sect4-bg-primary);
+}
+
 /* footer */
 #main-footer {
     position: relative;
@@ -304,6 +398,7 @@ section {
     align-items: flex-end;
 
     margin: 0;
+    background-color: var(--sect4-bg-primary);
 }
 
 .footer-divider {
@@ -311,6 +406,7 @@ section {
     padding: 0;
     overflow: hidden;
     display: flex;
+    background-color: var(--sect4-bg-primary);
 }
 
 .footer-divider svg {

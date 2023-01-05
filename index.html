@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
     <script src="./script.js" defer></script>
@@ -86,7 +87,15 @@
         <div class="header-content">
             <h1>Yves Stettler Curriculum Vitae</h1>
             <div class="animated-text">
-                <p id="animated-header-text"></p><span id="text-cursor">_</span>
+                <div id="animated-header-text">
+                    <p id="animated-name"></p>
+                    <p id="animated-function"></p>
+                </div>
+                <div class="small-device-header-text">
+                    <p>Yves Stettler</p>
+                    <p>Technicien en informatique</p>
+                </div>
+                <span id="text-cursor">_</span>
             </div>
         </div>
     </header>
@@ -100,10 +109,23 @@
                         class="shape-fill"></path>
                 </svg>
             </div>
-            <div class="section-content appearing-content">
-                <h2 class="page-title">Introduction</h2>
-                <article>
-                    <p>Something something darkside...</p>
+            <div id="introduction-container" class="section-content appearing-content">
+                <h2 class="page-title grid-item">Introduction</h2>
+                <article class="grid-item">
+                    <h3>Yves Stettler</h3>
+                    <p>Technicien en informatique</p>
+                    <address>
+                        Chemin du stand 27<br>
+                        2829 Vermes
+                    </address>
+                    <a href="mailto:yves.stettler@proton.me">yves.stettler@proton.me</a>
+                </article>
+                <article class="grid-item">
+                    <p>Je m'appele Yves Stettler et je suis en formation de technicien en informatique.</p>
+                    <p>Je suis passionné par l'informatique et plus particulièrement par le dévloppement.</p>
+                    <p>La programmation a été un hobby pour moi depuis maintenant douze ans.</p>
+                    <p>J'apprécie également résoudre des problèmes systèmes et le reverse engineering de tout ce que je peux trouver.</p>
+                    <p>J'aime apprendre de nouvelle chose et découvrir le fonctionnement de ce qui m'entoure, aussi bien en informatique quand dans les autres aspects de la vie.</p>
                 </article>
             </div>
         </section>
