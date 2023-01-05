@@ -8,11 +8,19 @@
     --bg-primary: #23232e;
     --bg-secondary: #141418;
 
-    --sect1-text-primary: #141418;
-    --sect1-bg-primary: #676787;
+    --divider1-color: #676787;
+
+    --header-bg: #001220;
+    --header-text: #b6b6b6;
+
+    --sect1-text-primary: var(--header-text);
+    --sect1-bg-primary: var(--header-bg);
     --sect2-text-primary: #23232e;
     --sect2-bg-primary: #B76999;
     --sect3-bg-primary: #8B6A98;
+
+    --footer-bg: var(--header-bg);
+    --footer-text: var(--header-text);
 
     --navbar-thickness: 5rem;
     --transition-speed: 200ms;
@@ -130,8 +138,8 @@ main,
 
 .main-header {
     height: 100vh;
-    background-color: #001220;
-    color: #b6b6b6;
+    background-color: var(--header-bg);
+    color: var(--header-text);
     overflow: hidden;
     margin: 0 0 0 var(--navbar-thickness);
     padding: 0;
@@ -150,7 +158,7 @@ main,
 }
 
 .animated-text {
-    color: #b6b6b6;
+    color: var(--header-text);
     font-size: 5rem;
     text-align: center;
 }
@@ -205,6 +213,10 @@ section {
     }
 }
 
+#introduction .page-divider .shape-fill {
+    fill: var(--divider1-color);
+}
+
 #introduction {
     color: var(--sect1-text-primary);
     background-color: var(--sect1-bg-primary);
@@ -215,7 +227,7 @@ section {
     width: 100%;
 }
 
-.page-divider .shape-fill {
+#formation .page-divider .shape-fill {
     fill: var(--sect1-bg-primary);
 }
 
@@ -277,6 +289,72 @@ section {
     padding: 0;
 }
 
-.footer-icon {
+/* footer */
+#main-footer {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    height: 20vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    justify-content: center;
+    align-items: flex-end;
+
+    margin: 0;
+}
+
+.footer-divider {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+}
+
+.footer-divider svg {
+    width: 100vw;
+}
+
+.personal-infos {
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    align-items: center;
+
+    background-color: var(--footer-bg);
+}
+
+.personal-infos p,
+.personal-infos a,
+.personal-infos svg {
+    color: var(--footer-text);
+    font-weight: 600;
+}
+
+#author {
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+#github a {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+}
+
+#github svg {
     height: 32px;
+    aspect-ratio: 1/1;
+    display: flex;
+    margin-right: .25rem;
+}
+
+#github p {
+    display: flex;
 }
