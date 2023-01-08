@@ -47,6 +47,14 @@ async function animationLoop() {
     }
 }
 
+function detailsEvent(item) {
+    item.addEventListener('click', () => item.classList.add('item-is-focused'));
+    
+    item.querySelectorAll('.close-details')
+        .forEach(closeButton => 
+            closeButton.addEventListener('click', () => item.classList.remove('item-is-focused')));
+}
+
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if(entry.isIntersecting) {
@@ -59,3 +67,7 @@ const observer = new IntersectionObserver(entries => {
 textCursorAnimation();
 animationLoop();
 document.querySelectorAll('.appearing-content').forEach(element => observer.observe(element));
+document
+    .querySelector('#knowledge')
+    .querySelectorAll('li')
+    .forEach(element => detailsEvent(element));

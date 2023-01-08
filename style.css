@@ -24,6 +24,9 @@
 
     --navbar-thickness: 5rem;
     --transition-speed: 200ms;
+
+    --logos-size: 10rem;
+    --details-logo-margin-top: 2rem;
 }
 
 @media screen and (max-width: 1079px) {
@@ -140,7 +143,6 @@ main,
 }
 
 /* header */
-
 
 .main-header {
     height: 100vh;
@@ -340,10 +342,7 @@ section {
     width: 80%;
     align-items: center;
     margin: 0 auto;
-}
-
-#knowledge div {
-    margin: .5rem;
+    padding: .5rem;
 }
 
 #knowledge h3 {
@@ -361,21 +360,82 @@ section {
     justify-content: space-around;
 }
 
-#knowledge li {
+#knowledge img {
+    height: var(--logos-size);
+    max-width: var(--logos-size);
+
+    margin: 0;
+    padding: 0;
+}
+
+#knowledge li:not(.item-is-focused) img {
     cursor: pointer;
     transition: transform calc(2*var(--transition-speed)) ease-in-out;
 }
 
-#knowledge li:hover {
+#knowledge li:not(.item-is-focused) img:hover {
     transform: scale(1.2);
 }
 
-#knowledge li img {
-    height: 11vw;
-    max-width: 11vw;
+#knowledge li:not(.item-is-focused) .details-box {
+    opacity: 0;
+}
 
+.item-is-focused img {
+    z-index: 4;
+    position: fixed;
+    top: var(--details-logo-margin-top);
+}
+
+.item-is-focused .item-details {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.521);
+    opacity: 1;
+    z-index: 3;
+    
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.item-is-focused .details-box {
+    background-color: #C62368;
+    width: 60vw;
+    height: calc(100vh - var(--logos-size) * (5 / 3));
+    margin-top: var(--details-logo-margin-top);
+    border-radius: 2.5rem;
+    padding: 2.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: start;
+}
+
+.close-details {
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-top: auto;
+    align-self: center;
+    justify-self: end;
+
+    text-decoration: underline;
+}
+
+.close-details:hover {
+    color: darkgray;
 }
 
 #hobbies {
