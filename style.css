@@ -424,18 +424,21 @@ section {
     justify-content: start;
 }
 
-.close-details {
-    cursor: pointer;
-    font-size: 1.5rem;
-    margin-top: auto;
-    align-self: center;
-    justify-self: end;
+.knowledge-gauge {
+    --size-add: 3rem; 
 
-    text-decoration: underline;
-}
+    display: block;
+    position: absolute;
+    top: calc(var(--details-logo-margin-top) - var(--size-add) / 2);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 
-.close-details:hover {
-    color: darkgray;
+    width: calc(var(--logos-size) + var(--size-add));
+    aspect-ratio: 1;
+    background-color: aqua;
+    border-radius: 50%;
+    z-index: 3;
 }
 
 #hobbies {

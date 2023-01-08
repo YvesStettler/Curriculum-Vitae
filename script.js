@@ -48,11 +48,7 @@ async function animationLoop() {
 }
 
 function detailsEvent(item) {
-    item.addEventListener('click', () => item.classList.add('item-is-focused'));
-    
-    item.querySelectorAll('.close-details')
-        .forEach(closeButton => 
-            closeButton.addEventListener('click', () => item.classList.remove('item-is-focused')));
+    item.addEventListener('click', () => item.classList.toggle('item-is-focused'));
 }
 
 const observer = new IntersectionObserver(entries => {
